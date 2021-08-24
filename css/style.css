@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+body{
+
+    background-color: #E8F0F6;
+    font-family: 'Roboto', sans-serif;
+}
+h1{
+    background-color:#39A2DB ;
+    color: #E8F0F6;
+    text-align: center;
+    padding: 15px 0px;
+    font-size: 30px;
+}
+
+fieldset{
+    position: absolute;
+    top: 200px;
+    left: 350px;
+    border: dashed rgb(172, 168, 168) 1px;
+    border-radius: 10px;
+    padding: 30px 15px 15px 15px;
+}
+input,select, label{
+display: block;
+width: 250px;
+}
+input,select{
+    margin-bottom: 10px;
+}
+.savebutton{
+    display: inline;
+    width: 50px;
+    float: left;
+    margin-right: 10px;
+    background-color:#39A2DB;
+    color: white;
+    padding: 5px 7px;
+    border: none;
+}
+#clearStorage{
+    width: 70px;
+    float: left;
+    margin-right: 10px;
+    background-color:#a10909;
+    color: white;
+    padding: 5px 7px;
+    border: none;
+}
+
+.tableSection{
+    position: absolute;
+    top: 210px;
+    left: 665px;
+    text-align: center;
+}
+img{
+    width:25px;
+    height: 40px;
+    margin: auto;
+}
+#table, tr,td{
+    text-align: center;
+    align-items: center;
+    border-collapse:separate;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    align-content: center;
+    font-weight: 900;
+    border-collapse:collapse;
+
+}
+#table tr{
+    border-collapse:separate;
+    border-spacing: 12px;
+    height: 85px;
+    margin-bottom: 12px;
+}
+tr:nth-child(even) {
+    background-color: #77ACF1;
+  }
+tr:nth-child(odd) {
+    background-color: #A2DBFA;
+  }
+
+  td:nth-child(3) {
+   padding: 2px 120px;
+  }
+  td:nth-child(1) {
+    padding: 2px 10px;
+   }
+  footer{
+    display: block;
+    position: fixed;
+    bottom: 0px;
+    text-align: center;
+    background-color:  #053742;
+    color: white;
+    width:100%;
+    padding: 10px 0px;
+    font-family: 'Roboto', sans-serif;
+  }
