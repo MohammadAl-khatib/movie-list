@@ -26,12 +26,13 @@ function submitHandler(event) {
 
     clearTable();
     render();
+
 }
 
 getData();
 render();
 
-function render() {
+function render () {
 
     for (let i = 0; i < objArray.length; i++) {
 
@@ -40,8 +41,10 @@ function render() {
 
         let td1Element = document.createElement('td');
         trElement.appendChild(td1Element);
-        td1Element.textContent = 'x'
-        td1Element.id = i;
+        let spanElement = document.createElement('span');
+        td1Element.appendChild(spanElement);
+        spanElement.textContent = 'x';
+        spanElement.id = i;
 
         let td2Element = document.createElement('td');
         trElement.appendChild(td2Element);
@@ -79,20 +82,21 @@ function getData() {
 
 table.addEventListener('click', clearHandler);
 function clearHandler(event) {
-    if (event.target.id) {
+    if (event.target.id && event.target.id !== 'table') {
         table.deleteRow(event.target.id);
-        objArray.splice(event.target.id,1);
-        localStorage.data=JSON.stringify(objArray);
+        objArray.splice(event.target.id, 1);
+        localStorage.data = JSON.stringify(objArray);
         clearTable();
         render();
+
     }
 }
 
-clearStorage.addEventListener('click',clickHandler);
-function clickHandler(){
+clearStorage.addEventListener('click', clickHandler);
+function clickHandler() {
 
     window.localStorage.removeItem('data');
     objArray = [];
     clearTable();
-    render();
+    render();    
 }
